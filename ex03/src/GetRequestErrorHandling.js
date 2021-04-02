@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import axios from 'axios';
 
-class GetRequestErrorHandling extends Component {
+class GetRequestErrorHandling extends React.Component {
     constructor(props) {
         super(props);
         this.state = { totalReactPackages: null, errorMessage: null };
@@ -13,7 +13,7 @@ class GetRequestErrorHandling extends Component {
             .catch((error) => {
                 this.setState({ errorMessage: error.message });
                 console.error('There was an error!', error);
-            })
+            });
     }
     render() {
       const { errorMessage } = this.state;
@@ -24,7 +24,7 @@ class GetRequestErrorHandling extends Component {
                   Error message: {errorMessage}
               </div>
           </div>
-      )
+        );
     }
 }
 
