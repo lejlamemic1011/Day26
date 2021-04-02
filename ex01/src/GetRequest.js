@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import axios from 'axios';
 
-class GetRequest extends Component {
+class GetRequest extends React.Component {
     constructor(props) {
         super(props);
         this.state = { totalReactPackages: null };
@@ -19,7 +19,7 @@ class GetRequest extends Component {
                 <h5 className="card-header">Simple GET Request</h5>
                 <div className="card-body">Total packages: {totalReactPackages}</div>
             </div>
-        )
+        );
     }
 }
 
